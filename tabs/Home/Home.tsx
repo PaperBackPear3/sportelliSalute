@@ -1,15 +1,8 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import HomeScreen from '../../screens/Home/Home';
 
 const HomeTab = ({ navigation }) => {
-  return (
-    <View>
-      <Button
-        title="Go to Help"
-        onPress={() => navigation.navigate('Help', { name: 'Jane' })}
-      />
-    </View>
-  );
+  return <HomeScreen navigation={navigation} />;
 };
 
 export default HomeTab;

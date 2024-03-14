@@ -1,15 +1,8 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import InfoScreen from '../../screens/Info/Info';
 
 const InfoTab = ({ navigation }) => {
-  return (
-    <View>
-      <Button
-        title="go to Home"
-        onPress={() => navigation.navigate('Home', { name: 'Jane' })}
-      />
-    </View>
-  );
+  return <InfoScreen navigation={navigation} />;
 };
 
 export default InfoTab;

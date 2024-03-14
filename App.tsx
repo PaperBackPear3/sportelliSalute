@@ -11,9 +11,9 @@ import { StyleSheet, useColorScheme } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ProfileTab from './tabs/Profile/Profile';
 import InfoTab from './tabs/Info/Info';
 import HomeTab from './tabs/Home/Home';
+import SettingsTab from './tabs/Settings/Settings';
 
 
 const Tab = createBottomTabNavigator();
@@ -39,9 +39,10 @@ function App(): React.JSX.Element {
           options={{ title: 'home' }}
         />
         <Tab.Screen
-          name="Help"
-          component={ProfileTab}
-          options={{ title: 'Help' }}
+          name="Settings"
+          component={SettingsTab}
+          options={{ title: 'Settings' }}
+          initialParams={{ name: 'Jane' }}
         />
       </Tab.Navigator>
     </NavigationContainer>
