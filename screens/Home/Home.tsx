@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, View } from 'react-native';
+import { HomeTabProps } from '../../tabs/Home/Home';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation }:HomeTabProps) => {
   return (
     <View>
       <Button

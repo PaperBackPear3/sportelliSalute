@@ -1,12 +1,15 @@
 import React from 'react';
 import { Button, View } from 'react-native';
+import { InfoTabProps } from '../../tabs/Info/Info';
 
-const InfoScreen = ({ navigation }) => {
+
+
+const InfoScreen = ({ navigation }:InfoTabProps) => {
   return (
     <View>
       <Button
         title="go to Home"
-        onPress={() => navigation.navigate('Home', { name: 'Jane' })}
+        onPress={() => navigation.navigate('Home')}
       />
     </View>
   );

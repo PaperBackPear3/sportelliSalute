@@ -1,8 +1,13 @@
 import React from 'react';
 import InfoScreen from '../../screens/Info/Info';
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { RootStackParamList } from '../../App';
 
-const InfoTab = ({ navigation }) => {
-  return <InfoScreen navigation={navigation} />;
+export type InfoTabProps = BottomTabScreenProps<RootStackParamList, 'Info'>;
+
+
+const InfoTab = ({ navigation,route }:InfoTabProps) => {
+  return <InfoScreen navigation={navigation} route={route} />;
 };
 
 export default InfoTab;

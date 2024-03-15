@@ -1,7 +1,11 @@
 import React from 'react';
 import SettingsScreen from '../../screens/Settings/Settings';
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { RootStackParamList } from '../../App';
 
-const SettingsTab = ({ navigation, route }) => {
+export type SettingsTabProps = BottomTabScreenProps<RootStackParamList, 'Settings'>;
+
+const SettingsTab = ({ navigation, route }:SettingsTabProps) => {
   return <SettingsScreen navigation={navigation} route={route} />;
 };
 

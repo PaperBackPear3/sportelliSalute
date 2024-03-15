@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Button, View } from 'react-native';
+import { SettingsTabProps } from '../../tabs/Settings/Settings';
 
-const SettingsScreen = ({ navigation, route }) => {
+const SettingsScreen = ({ navigation }:SettingsTabProps) => {
   return (
     <View>
-      <Text>This is {route.params.name}'s profile</Text>
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
     </View>
   );
 };
