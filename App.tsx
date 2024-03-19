@@ -24,8 +24,8 @@ import {
 
 export type RootStackParamList = {
   Home: undefined;
-  Info: undefined;
-  Settings: { name: string };
+  Informazioni: undefined;
+  Impostazioni: undefined;
 };
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
@@ -43,8 +43,8 @@ function App(): React.JSX.Element {
             return (
               <Text
                 style={{
-                  fontSize: focused ? 20 : 12,
-                  fontWeight: focused ? '600' : '300',
+                  fontSize: focused ? 18 : 14,
+                  fontWeight: focused ? '600' : '400',
                   color: Colors.primary,
                 }}>
                 {route.name}
@@ -54,13 +54,13 @@ function App(): React.JSX.Element {
           tabBarIcon: () => {
             let iconSource = faInfoCircle;
 
-            if (route.name === 'Info') {
+            if (route.name === 'Informazioni') {
               iconSource = faInfoCircle;
             }
             if (route.name === 'Home') {
               iconSource = faHomeUser;
             }
-            if (route.name === 'Settings') {
+            if (route.name === 'Impostazioni') {
               iconSource = faGears;
             }
 
@@ -70,10 +70,10 @@ function App(): React.JSX.Element {
           },
         })}>
         <Tab.Screen
-          name="Info"
+          name="Informazioni"
           component={InfoTab}
           options={{
-            title: 'Info',
+            title: 'Informazioni',
             tabBarIcon: () => <FontAwesomeIcon icon={faInfoCircle} />,
           }}
         />
@@ -86,13 +86,12 @@ function App(): React.JSX.Element {
           }}
         />
         <Tab.Screen
-          name="Settings"
+          name="Impostazioni"
           component={SettingsTab}
           options={{
-            title: 'Settings',
+            title: 'Impostazioni',
             tabBarIcon: () => <FontAwesomeIcon icon={faGears} />,
           }}
-          initialParams={{ name: 'Jane' }}
         />
       </Tab.Navigator>
     </NavigationContainer>

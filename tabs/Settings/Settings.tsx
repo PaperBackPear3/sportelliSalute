@@ -3,7 +3,7 @@ import SettingsScreen from '../../screens/Settings/Settings';
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import { RootStackParamList } from '../../App';
 
-export type SettingsTabProps = BottomTabScreenProps<RootStackParamList, 'Settings'>;
+export type SettingsTabProps = BottomTabScreenProps<RootStackParamList, 'Impostazioni'>;
 
 const SettingsTab = ({ navigation, route }:SettingsTabProps) => {
   return <SettingsScreen navigation={navigation} route={route} />;
